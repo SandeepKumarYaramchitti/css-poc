@@ -19,6 +19,36 @@
                 <li><a href="#">FAQ</a></li>
             </ul>
         </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Eat fresh fruits</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsa aliquid molestias ab eligendi excepturi esse voluptatibus nemo, ex maxime, tempore illo. Fugiat nulla sit iusto voluptatum asperiores laborum, pariatur quibusdam obcaecati repellat animi. Vitae?</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="apple.png" />
+            </div>  
+        </div>
+        <ul class="thumb">
+            <li data-text="Apple"><img src="apple.png"/></li>
+            <li data-text="Mango"><img src="mango.png"/></li>
+            <li data-text="Watermelon"><img src="watermelon.png"/></li>
+            <li data-text="Dragonfruits"><img src="dragonfruits.png"/></li>
+            <li data-text="PineApple"><img src="pineApple.png"/></li>
+        </ul>
     </section>
+    <script>
+        // Add active class in selected thumbnail
+        let el = document.querySelectorAll('.thumb li');
+        for(let i = 0; i < el.length; i++){
+            el[i].onclick = function() {
+                var c = 0;
+                while(c < el.length){
+                    el[c++].className = 'check';
+                }
+                el[i].className = 'check active';
+            }
+        }
+    </script>
 </body>
 </html>
