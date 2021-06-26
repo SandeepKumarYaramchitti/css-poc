@@ -197,3 +197,24 @@ header .navigation li a:hover {
     transform: scale(0.6);
     filter: invert(1);
 }
+
+@media (max-width: 991px) {
+    
+    .bg::before {
+        display: none;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    section {
+        padding: 2px;
+        padding-bottom: 120px;
+    }
+
+    .content {
+        margin-top: 100px;
+        flex-direction: column;
+    }
+}

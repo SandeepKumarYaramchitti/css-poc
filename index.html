@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Landing Page</title>
     <link rel="stylesheet" href="style.css" />
@@ -30,11 +29,11 @@
             </div>  
         </div>
         <ul class="thumb">
-            <li data-text="Apple" class="active"><img src="apple.png" onclick="imgSlider('apple.png')"/></li>
-            <li data-text="Mango"><img src="mango.png" onclick="imgSlider('mango.png')"/></li>
-            <li data-text="Watermelon"><img src="watermelon.png" onclick="imgSlider('watermelon.png')"/></li>
-            <li data-text="Dragonfruits"><img src="dragonfruits.png" onclick="imgSlider('dragonfruits.png')"/></li>
-            <li data-text="PineApple"><img src="pineApple.png" onclick="imgSlider('pineApple.png')"/></li>
+            <li data-text="Apple" class="active"><img src="apple.png" onclick="imgSlider('apple.png');changeBgColor('#FF5733')"/></li>
+            <li data-text="Mango"><img src="mango.png" onclick="imgSlider('mango.png');changeBgColor('#FFE633')"/></li>
+            <li data-text="Watermelon"><img src="watermelon.png" onclick="imgSlider('watermelon.png');changeBgColor('#5BFF33')"/></li>
+            <li data-text="Dragonfruits"><img src="dragonfruits.png" onclick="imgSlider('dragonfruits.png');changeBgColor('#FF33D7')"/></li>
+            <li data-text="PineApple"><img src="pineApple.png" onclick="imgSlider('pineApple.png');changeBgColor('#F6FF33')"/></li>
         </ul>
         <ul class="sci">
             <li><a href="#"><img src="facebook.png"></a></li>
@@ -46,6 +45,12 @@
         // Change Image on Click
         function imgSlider(anything) {
             document.querySelector('.imgLogo').src = anything;
+        }
+
+        // Change background color
+        function changeBgColor(color) {
+            const bg = document.querySelector('.bg')
+            bg.style.background = color;
         }
         // Add active class in selected thumbnail
         let el = document.querySelectorAll('.thumb li');
